@@ -1,0 +1,10 @@
+<datastore-indexes>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Item" ancestor="false" source="manual">
+        <property name="category" direction="asc"/>
+        <property name="type" direction="asc"/>
+        <property name="title" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

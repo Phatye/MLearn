@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="${packageName}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/viewRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register User"
+        android:gravity="center"
+        android:textColor="#0000FF"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:hint="User Name"
+        android:layout_gravity="left"
+        android:layout_below="@+id/viewRegister"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/userEmail"
+        android:layout_width="fill_parent"
+        android:hint="E-Mail"
+        android:layout_gravity="left"
+        android:layout_below="@+id/userName"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+    
+    <Spinner
+        android:id="@+id/spinType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userEmail"
+        android:layout_marginTop="20dp"
+        android:spinnerMode="dropdown"
+        android:ems="10" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRegister"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnRegister_Click"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/spinType"
+        android:text="Register User" />
+    
+
+</RelativeLayout>

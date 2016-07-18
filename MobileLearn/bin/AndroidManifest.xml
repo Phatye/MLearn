@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.phatye.mobilelearn"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.phatye.mobilelearn.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.phatye.mobilelearn.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.phatye.mobilelearn.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.phatye.mobilelearn.GCMIntentService" />
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.phatye.mobilelearn" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.phatye.mobilelearn" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.phatye.mobilelearn.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.phatye.mobilelearn.AdminMainActivity"
+            android:label="@string/title_activity_admin_main" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.RegisterUserActivity"
+            android:label="@string/title_activity_register_user" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.MaterialListActivity"
+            android:label="@string/title_material_list" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.MaterialDetailActivity"
+            android:label="@string/title_material_detail" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.phatye.mobilelearn.MaterialListActivity" />
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.UploadActivity"
+            android:label="@string/title_activity_upload" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.FileChooser"
+            android:label="@string/title_activity_file_chooser" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.ResourceListActivity"
+            android:label="@string/title_resource_list" >
+        </activity>
+        <activity
+            android:name="com.phatye.mobilelearn.ResourceDetailActivity"
+            android:label="@string/title_resource_detail" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.phatye.mobilelearn.ResourceListActivity" />
+        </activity>
+    </application>
+
+</manifest>

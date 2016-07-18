@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value>com.phatye.mobilelearn.DeviceInfoEndpoint,com.phatye.mobilelearn.ItemEndpoint,com.phatye.mobilelearn.MessageEndpoint,com.phatye.mobilelearn.UserEndpoint</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping> 
+ 
+ <servlet>
+  <servlet-name>PostItem</servlet-name>
+  <servlet-class>com.phatye.mobilelearn.PostItem</servlet-class>
+ </servlet>
+<servlet-mapping>
+  <servlet-name>PostItem</servlet-name>
+  <url-pattern>/postItem</url-pattern>
+ </servlet-mapping>
+ 
+<servlet>
+  <servlet-name>ServeBlob</servlet-name>
+  <servlet-class>com.phatye.mobilelearn.ServeItem</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>ServeBlob</servlet-name>
+  <url-pattern>/serveBlob</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+  <servlet-name>BlobUrl</servlet-name>
+  <servlet-class>com.phatye.mobilelearn.BlobUrlServlet</servlet-class>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>BlobUrl</servlet-name>
+  <url-pattern>/blobUrl</url-pattern>
+ </servlet-mapping>
+ 
+</web-app>

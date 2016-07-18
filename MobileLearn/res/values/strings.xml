@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mobile Learn</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_admin_main">Admin</string>
+    <string name="title_activity_register_user">Register User</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_material_list">Materials</string>
+    <string name="title_material_detail">Materials</string>
+    <string name="title_activity_upload">Upload Material</string>
+    <string name="title_activity_file_chooser">File Chooser</string>
+    <string name="title_resource_list">Resources</string>
+    <string name="title_resource_detail">Resource</string>
+
+</resources>
